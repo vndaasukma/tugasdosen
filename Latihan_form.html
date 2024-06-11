@@ -1,0 +1,147 @@
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="logo hmti.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    .button {
+        background-color: #0481aa; /* Blue */
+        border: none;
+        color: white;
+        padding: 8px 14px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 2px 2px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+    }
+    .button1 {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .button:hover {
+        background-color: rgb(253, 6, 146);
+    }
+    .reset:hover {
+        background-color: rgb(102, 0, 255);
+    }
+
+</style>
+
+<body style="background-image: url(soft.jpg);">
+    <h1>FORM PENDAFTARAN UKM TEKNOLOGI</h1>
+    <h3>Mahasiswa Baru dan Satu Tingkat Diatasnya</h3>
+    <fieldset>
+        <legend><b>IDENTITAS MAHASISWA</b></legend>
+        <form action="" method="">
+            <table>
+                <tr>
+                    <td>Nama</td>
+                    <td>:</td>
+                    <td><input type="text" name="name" /></td>
+                </tr>
+                <tr>
+                    <td>Alamat</td>
+                    <td>:</td>
+                    <td><input type="text" name="address" required /></td>
+                </tr>
+                <tr>
+                    <td>Kelas</td>
+                    <td>:</td>
+                    <td><input type="text" name="class" required /></td>
+                </tr>
+                <tr>
+                    <td>NIM</td>
+                    <td>:</td>
+                    <td><input type="password" name="nim" /></td>
+                </tr>
+                <tr>
+                    <td>Contoh Form Disable</td>
+                    <td>:</td>
+                    <td><input type="text" name="tidak_dapat_diisi" disabled></td>
+                </tr>
+                <tr>
+                    <td> Contoh Form Readonly</td>
+                    <td>:</td>
+                    <td><input type="text" name="hanya_dibaca" readonly value="Isi Data Dengan Benar" /></td>
+                </tr>
+                <tr>
+                    <td>Tanggal Lahir</td>
+                    <td>:</td>
+                    <td><input type="date" name="birthday" /></td>
+                </tr>
+                <tr>
+                    <td>Hobi</td>
+                    <td>:</td>
+                    <td><input type="checkbox" name="hoby" value="menyanyi" /> Singing
+                        <input type="checkbox" name="hoby" value="mendaki" /> Hiking
+                        <input type="checkbox" name="hoby" value="berenang" /> Swimming
+                        <input type="checkbox" name="hoby" value="bepergian" /> Traveling
+                        <input type="checkbox" name="hoby" value="makan" /> Eat
+                        <input type="checkbox" name="hoby" value="membaca" /> Reading
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>:</td>
+                    <td><input type="radio" checked="checked" name="Sex" value="perempuan">Perempuan
+                        <input type="radio" name="Sex" value="laki-laki">Laki-laki
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kelas</td>
+                    <td>:</td>
+                    <td>
+                        <select name='kelas'>
+                            <option>-- Pilih Kelas --</option>
+                            <option value='1a'>1A</option>
+                            <option value='1b'>1B</option>
+                            <option value='2a'>2A</option>
+                            <option value='2b'>2B</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jurusan</td>
+                    <td>:</td>
+                    <td>
+                        <select name="Jurusan">
+                            <option>-- Pilih Jurusan --</option>
+                            <option value="informatics">Teknologi Informasi</option>
+                            <option value="accounting">Akuntansi</option>
+                            <option value="otomotif">Otomotif</option>
+                            <option value="civil">Teknik Sipil</option>
+                            <option value="rpl">Perangkat Lunak</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Deskripsi Diri Singkat</td>
+                    <td>:</td>
+                    <td><textarea rows="10" cols="30"> Saya merupakan lulusan sma favorit </textarea></td>
+                </tr>
+                <tr>
+                    <td>Upload CV</td>
+                    <td>:</td>
+                    <td><input type="file" name="cv"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><input type="submit" name="simpan" value="simpan"> <input type="reset" value="reset"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="button button1"><i class="fa fa-save"></i> Simpan</button>
+                        <button class="button button1 reset"><i class="fa fa-close"></i> Reset</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title>Form Validasi Javascript</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <p></p>
+    <div class="container">
+        <h4>Contoh Validasi Form Dengan Javascript</h4>
+        <form name="formPendaftaran" action="#" method="#" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label>Nama Mahasiswa</label>
+                <input type="text" name="nama" 
+                    placeholder="Nama Lengkap Mahasiswa" 
+                    class="form-control" required maxlength="40" minlength="3">
+            </div>
+
+            <div class="form-group">
+                <label>Tempat Lahir</label>
+                <input type="text" name="tempat lahir" 
+                    placeholder="Tempat Lahir Mahasiswa" 
+                    class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Umur</label>
+                <input type="number" name="umur" 
+                    placeholder="Umur Mahasiswa" 
+                    class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Program Studi</label>
+                <select name="prodi" class="form-control">
+                    <option value="0">Pilih Prodi</option>
+                    <option value="1">D3 Teknik Lingkungan</option>
+                    <option value="2">D3 Teknik Informatika</option>
+                    <option value="3">D3 Teknik Industri</option>
+                    <option value="4">D4 Teknik Sipil</option>
+                    <option value="5">D4 Teknik Rekayasa Otomotif</option>
+                    <option value="6">D4 Teknik Mesin</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            if (document.forms["formPendaftaran"]["nama"].value == "") {
+                alert("Nama Tidak Boleh Kosong");
+                document.forms["formPendaftaran"]["nama"].focus();
+                return false;
+            }
+            if (document.forms["formPendaftaran"]["tempat lahir"].value == "") {
+                alert("Alamat Tidak Boleh Kosong");
+                document.forms["formPendaftaran"]["tempat lahir"].focus();
+                return false;
+            }
+            if (document.forms["formPendaftaran"]["umur"].value == "") {
+                alert("Umur Tidak Boleh Kosong");
+                document.forms["formPendaftaran"]["umur"].focus();
+                return false;
+            }
+            if (document.forms["formPendaftaran"]["prodi"].selectedIndex < 1) {
+                alert("Pilih Prodi");
+                document.forms["formPendaftaran"]["prodi"].focus();
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
